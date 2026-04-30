@@ -12,7 +12,7 @@ This project allows users to add, view, and update tasks stored in a file.
   File Handling (FileWriter, BufferedReader)
 📂 Project Structure
   src/Main.java → Main logic
-  tasks.json → Stores tasks (currently plain text)
+  tasks.json → Stores tasks (currently plain texts)
 ▶️ How to Run
   Compile
   javac Main.java
