@@ -28,11 +28,8 @@ java Main update "Buy milk" "Buy coffee"
 ⚠️ Limitations
 
   Tasks are stored as plain text (not actual JSON)
-  No delete functionality yet
   No task IDs
 📌 Future Improvements
 
   Convert storage to real JSON format
-  Add delete feature
-  Add task IDs and status (done/pending)
   Build a better CLI interface
