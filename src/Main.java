@@ -29,8 +29,15 @@ class Main {
             String tobereplce = args[1];
             String isreplacing = args[2];
             updatetasks(tobereplce, isreplacing);
-
+        } else if (command.equals("delete")) {
+            if (args.length < 2) {
+                System.out.println("provide a task");
+                return;
+            }
+            String tobedeleted = args[1];
+            deletetask(tobedeleted);
         }
+
 
     }
 
@@ -80,6 +87,30 @@ class Main {
             System.out.println("Error in re writing");
         }
 
+    }
+    static void deletetask(String tobedeleted){
+        ArrayList<String> lines = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader("tasks.json"))){
+            String line;
+            while ((line = br.readLine()) != null){
+                if(line.equals(tobedeleted)){
+                    continue;
+                }
+                else {
+                    lines.add(line);
+                }
+            }
+        }
+        catch (IOException e){
+            System.out.println("error in update");
+        }
+        try(FileWriter wr = new FileWriter("tasks.json")){
+            for(String st : lines){
+                wr.write(st + "\n");
+            }
+        }catch (IOException e){
+            System.out.println("Error in re writing");
+        }
     }
 
 }
