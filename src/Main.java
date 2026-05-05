@@ -118,6 +118,7 @@ class Main {
             }
         }catch (IOException e){
             System.out.println("Error in re writing");
+            System.out.println("Error in re writing");
         }
     }
     static void updatestatus(String statustask,String statusnow){
@@ -136,12 +137,14 @@ class Main {
         }
         catch (IOException e){
             System.out.println("error in update");
+            System.out.println("error in update");
         }
         try(FileWriter wr = new FileWriter("tasks.json")){
             for(String st : lines){
                 wr.write(st + "\n");
             }
         }catch (IOException e){
+            System.out.println("Error in re writing");
             System.out.println("Error in re writing");
         }
 
