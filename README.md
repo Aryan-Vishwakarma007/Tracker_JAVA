@@ -26,10 +26,6 @@ Update a task:
 java Main update "Buy milk" "Buy coffee"
 
 ⚠️ Limitations
-
   Tasks are stored as plain text (not actual JSON)
   No task IDs
-📌 Future Improvements
 
-  Convert storage to real JSON format
-  Build a better CLI interface
